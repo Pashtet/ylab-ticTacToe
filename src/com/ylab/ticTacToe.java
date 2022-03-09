@@ -46,7 +46,7 @@ public class ticTacToe {
     }
 
     public static void writeRatingInFile(String result) throws IOException {
-        Path path = Path.of("/results.txt");
+        Path path = Path.of("./results.txt");
         if (!Files.isRegularFile(path))
             Files.createFile(path);
         Files.writeString(path, new Date() + System.lineSeparator(), StandardOpenOption.APPEND);
